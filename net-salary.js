@@ -3,6 +3,26 @@
 //Calculate the payee (i.e. Tax), NHIF Deductions, NSSF Deductions, gross salary, and net salary. 
 
 
-function calculateNetSalary(benefits,basicsalary){
+function calculateNetSalary(benefits,basicSalary){
 
+
+    let taxRate = 30/100;
+    let nssfRate = 0.06;
+    let nhifRate = 0.05;
+
+    let grossSalary = benefits + basicSalary;
+    
+    let tax = grossSalary * taxRate;
+    let nssf = grossSalary * nssfRate;
+    let nhif = grossSalary * nhifRate;
+
+
+    let totalDeductions = tax + nssf + nhif;
+
+    let netSalary = grossSalary - totalDeductions;
+    return netSalary;
 }
+let benefits = 27400;
+let basicSalary = 200000;
+let netSalary = calculateNetSalary(benefits, basicSalary);
+console.log(netSalary); 
