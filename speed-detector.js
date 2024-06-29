@@ -6,7 +6,7 @@
 //If the driver gets more than 12 points, the function should print: “License suspended”.
 
 
-let speed =40;
+let speed =96;
 
 function SpeedDetector(speed){
     const maxSpeed = 70;
