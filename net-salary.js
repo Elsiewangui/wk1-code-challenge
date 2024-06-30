@@ -7,8 +7,8 @@ function calculateNetSalary(benefits,basicSalary){
 
 
     let taxRate = 30/100;
-    let nssfRate = 0.06;
-    let nhifRate = 0.05;
+    let nssfRate = 0.015;
+    let nhifRate = 0.06;
 
     let grossSalary = benefits + basicSalary;
     
